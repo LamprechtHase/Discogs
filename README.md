@@ -6,3 +6,7 @@ Plays well with night color shift.
 Changing colors to personal preference should be easy in case desired.
 I try to keep everything as simple as possible. I'm actively using this style and plan to constantly update and bugfix it.
 Bug reports are welcome since I'm using only a fraction of Discogs.
+
+![Discogs dark explore](Discogs_Explore.png?raw=true "Explore Discogs with dark userstyle")
+
+![Discogs dark release](Discogs_Release.png?raw=true "Discogs release page with dark userstyle")
