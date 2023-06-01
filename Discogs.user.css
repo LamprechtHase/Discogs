@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.5
+@version 0.0.6
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -69,7 +69,15 @@
 	.lwl_card /* list explorer */,
 	.section_content /* seen inside aside */,
 	button[class^='video'] div[class^='title'] /* title of video inside youtube container */,
-	div[class^='well'] /* seen used as container for album versions */
+	div[class^='well'] /* seen used as container for album versions */,
+	blockquote,
+	.drag_drop_content /* add release */,
+	.drag-drop-list /* add release */,
+	div[class^='uploader']:hover /* add release */,
+	.history_form /* release history */,
+	div[class^='item_actions'] /* sell - manage - import and export */,
+	.bulk_actions_section /* sell - manage - with entire inventory */,
+	span[class^='vote_info_helper'] /* edit release */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -91,7 +99,13 @@
 	div[class^="ginput_container"] /* form on advertising page */,
 	span[id^='input'] input /* form on advertising page */,
 	div[class^="ginput_container"] textarea /* form on advertising page */,
-	div[class^="ginput_container"] input /* form on advertising page */
+	div[class^="ginput_container"] input /* form on advertising page */,
+	a.action_block /* sell - manage - import and export */,
+	.react-modal,
+	.bg-grey-lighter,
+	.bg-white,
+	#uploader_messaging:hover /* add release */,
+	.drag_drop_content:hover /* add release */
 	{
 		background: #666 !important;
 		background-color: #666 !important;
@@ -106,17 +120,10 @@
 		background-color: inherit !important;
 	}
 	
-	.react-modal,
-	.bg-grey-lighter,
-	.bg-white
-	{
-		background-color: #666 !important;
-	}
-	
 	.react-modal-title { color: #555; }
 	
 	.facet-bar /* bar graph indicating quantity, found in marketplace */,
-	.tool-tip-content /* pop-up seen on seller profile page (ships from) */
+	.tool-tip-content /* pop-up seen on seller profile page (shipping) */
 	{ 
 		background-color: #888 !important;
 	}
@@ -177,7 +184,8 @@
 		color: #000 !important;
 	}
 	
-	.facet_count /* numbers in .facet-bar indicating quantity, found in marketplace */
+	.facet_count /* numbers in .facet-bar indicating quantity, found in marketplace */,
+	span[class^='bulk_action'] /* sell - manage - with entire inventory */
 	{
 		color: #eee !important;
 	}
@@ -226,7 +234,8 @@
 	.converted_price /* special highlight for price */,
 	.order_fee /* special highlight for fee */,
 	#order_total_fee /* special highlight for fee */,
-	div[class^='noItems'] /* release page, highlight no items for sale */
+	div[class^='noItems'] /* release page, highlight no items for sale */,
+	.action_block_header /* sell - manage - import and export */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
