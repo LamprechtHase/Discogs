@@ -1,3 +1,10 @@
+/* ==UserStyle==
+@name Discogs lighter dark
+@namespace www.discogs.comment
+@version 0.2
+@description dark mode for Discogs
+@author Lamprecht Hase
+==/UserStyle== */
 @-moz-document domain("discogs.com")
 {
 	body {
@@ -47,7 +54,10 @@
 	.dashboard_module /* dashboard */,
 	ul.module_blocks .header /* dashboard */,
 	div[class^='box'],
-	.messageContents /* messages */
+	.messageContents /* messages */,
+	.order-timestamp /* ordered item page header */,
+	.order-item-count /* ordered item page header */,
+	ul.forum-landing-topic-meta li /* forum overview stats to the right */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -96,18 +106,14 @@
 	table tbody tr.shortcut_navigable:hover td {
 		background-color: #777 !important;
 	}
-	table tbody tr.shortcut_navigable td.notes.has_header.cell_collapsed div.notes_field.notes_edited,
-	table tbody tr.shortcut_navigable td.notes.has_header.cell_collapsed div.notes_field.notes_not_edited { /* fix for no padding in wantlist notes */
+	table tbody tr.shortcut_navigable td.notes.has_header.cell_collapsed div.notes_field.notes_edited /* fix for no padding in wantlist notes */,
+	table tbody tr.shortcut_navigable td.notes.has_header.cell_collapsed div.notes_field.notes_not_edited /* fix for no padding in wantlist notes */
+	{
 		padding: 0.5em !important;
 	}
-	table tbody tr.shortcut_navigable:hover td.notes.has_header.cell_collapsed div.notes_field.notes_edited { /* fix for low contrast in wantlist notes on hover */
-		color: #444 !important;
-	}
-	table tbody tr td h3 {
-		color: red !important;
-	}
-	table.sell tbody tr td {
-		color: #eee !important;
+	table tbody tr.shortcut_navigable:hover td.notes.has_header.cell_collapsed div.notes_field.notes_edited /* fix for low contrast in wantlist notes on hover */
+	{
+		color: #222 !important;
 	}
 	.tool-tip-content {
 		background-color: #888 !important;
@@ -118,7 +124,11 @@
 	.react-modal-title {
 		color: #555;
 	}
-	label, .community_number, .community_result, .mplabel {
+	label,
+	.community_number /* wantlist number of people have or want release */,
+	.community_result /* wantlist number of people have or want release */,
+	.mplabel /* e.g. wantlist label text in front of media condition, ships from etc. */
+	{
 		color: #ccc !important;
 	}
 	.alert-message-text, .order_message_time {
@@ -199,10 +209,13 @@
 	div[class^='noItems'] p { /* release page, highlight no items for sale */
 		color: inherit !important;
 	}
-	.additional-instructions { /* on orders page, instructions, slightly less bright background */
+	.additional-instructions /* on orders page, instructions, slightly less colorful background */
+	{
 		background-color: #ffb !important;
 	}
-	.additional-instructions p { /* on orders page, instructions, better contrast for text on bright background */
+	.additional-instructions p /* on orders page, instructions, better contrast for text on bright background */,
+	.button-yellow /* register button for example, yellow hyperlink on yellow background is not well readable*/
+	{ 
 		color: #222 !important;
 	}
 	#youtube_tracklist, ul[class^='videos_'] { /* fixes layout of youtube video box */
