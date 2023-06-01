@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.4
+@version 0.0.5
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -28,7 +28,8 @@
 	}
 	
 	a /* hyperlink text color */,
-	.notes_add /* color for editing notes in wantlist, set same as hyperlink */
+	.notes_add /* color for editing notes in wantlist, set same as hyperlink */,
+	.list_title /* list explorer */
 	{ 
 		color: #ffbb00 !important;
 	}
@@ -63,7 +64,12 @@
 	.messageContents /* messages */,
 	.order-timestamp /* ordered item page header */,
 	.order-item-count /* ordered item page header */,
-	ul.forum-landing-topic-meta li /* forum overview stats to the right */
+	ul.forum-landing-topic-meta li /* forum overview stats to the right */,
+	.lwl_list /* list explorer */,
+	.lwl_card /* list explorer */,
+	.section_content /* seen inside aside */,
+	button[class^='video'] div[class^='title'] /* title of video inside youtube container */,
+	div[class^='well'] /* seen used as container for album versions */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -126,7 +132,11 @@
 	
 	.tab_menu > li.current { background-color: #aaa !important; }
 	
-	table thead th { color: red !important; }
+	table thead th,
+	table thead tr button /* seen applied to album versions table, buttons for sorting */
+	{
+		color: red !important;
+	}
 	
 	table thead tr,
 	table thead tr th
@@ -266,7 +276,7 @@
 		max-height: 640px !important;
 		outline: none !important;
 	}
-	
+		
 	.container-player /* player on release page (Apple music) */
 	{
 		background-color: #ddd !important;
@@ -293,4 +303,6 @@
 	{
 		background: linear-gradient(90deg,hsla(0,0%,100%,0),#444) !important;
 	}
+	
+	.ad_container { display: none !important } /* advertising */
 }
