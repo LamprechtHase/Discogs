@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.6
+@version 0.0.7
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -313,5 +313,26 @@
 		background: linear-gradient(90deg,hsla(0,0%,100%,0),#444) !important;
 	}
 	
-	.ad_container { display: none !important } /* advertising */
+	.ad_container /* advertising */,
+	div[class^='ad_flexa'] /* advertising */,
+	div[class^='ad_right'] /* advertising */,
+	div[class^='ad_left'] /* advertising */,
+	.ad /* advertising */,
+	.display-ad /* advertising */,
+	.ads-here /* advertising */,
+	.ads-ad /* advertising */,
+	#body_top /* advertising */,
+	#body_left /* advertising */,
+	#body_right /* advertising */,
+	.body_side /* advertising */,
+	iframe[id^='google_ads'] /* advertising */,
+	iframe[title^='Advertisement'] /* advertising */,
+	#ad_native /* advertising */,
+	.ad_bottom /* advertising */,
+	#ad_bottom /* advertising */,
+	.sticky_footer /* advertising */
+	{
+		display: none !important
+		
+	}
 }
