@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.7
+@version 0.0.8
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -243,6 +243,8 @@
 	}
 	
 	h2 > button /* footer */,
+	a.ultp-block-title /* brwosing Discogs Features */,
+	a.wp-block-post-title /* encountered on Selling page */,
 	.reduced
 	{
 		color: inherit !important;
@@ -274,7 +276,8 @@
 	}
 	
 	.additional-instructions p /* on orders page, instructions, better contrast for text on bright background */,
-	.button-yellow /* register button for example, yellow hyperlink on yellow background is not well readable*/
+	.button-yellow /* register button for example, yellow hyperlink on yellow background is not well readable*/,
+	a.register /* register button */
 	{ 
 		color: #222 !important;
 	}
@@ -299,7 +302,9 @@
 	header svg /* fixes unintended inversion of SVGs in page header */,
 	#discogs-logo /* fixes unintended inversion of SVGs in page header */,
 	#header_logo /* fixes unintended inversion of SVGs in page header */,
-	ul[class^='icons'] li a svg /* fixes unintended inversion of SVGs in page header */
+	ul[class^='icons'] li a svg /* fixes unintended inversion of SVGs in page header */,
+	span[class^='rating'] svg /* stars in review of release */,
+	svg[class^='icon'] /* expand actions button in review of release */
 	{
 		filter: invert(0%) !important;
 	}
