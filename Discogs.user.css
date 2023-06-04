@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.9
+@version 0.0.10
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -80,7 +80,8 @@
 	div[class^='item_actions'] /* sell - manage - import and export */,
 	.bulk_actions_section /* sell - manage - with entire inventory */,
 	span[class^='vote_info_helper'] /* edit release */,
-	#release-actions header[class^='header'] button /* release page */
+	#release-actions header[class^='header'] button /* release page */,
+	#master-actions header[class^='header'] button /* release page */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
