@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.8
+@version 0.0.9
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -41,6 +41,8 @@
 	.icon-user /* forum aside icon color */,
 	.icon-comment /* forum aside icon color */,
 	.icon-calendar-o /* forum aside icon color */,
+	.icon-vinyl /* release page artist code icon */,
+	span[class^='copy_shortcut_code'] /* release page artist code text */,
 	form,
 	.form-block,
 	header,
@@ -77,7 +79,8 @@
 	.history_form /* release history */,
 	div[class^='item_actions'] /* sell - manage - import and export */,
 	.bulk_actions_section /* sell - manage - with entire inventory */,
-	span[class^='vote_info_helper'] /* edit release */
+	span[class^='vote_info_helper'] /* edit release */,
+	#release-actions header[class^='header'] button /* release page */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -299,7 +302,7 @@
 		filter: invert(100%) !important;
 	}
 	
-	header svg /* fixes unintended inversion of SVGs in page header */,
+	a[id^='discogs-logo'] svg /* fixes unintended inversion of SVGs in page header */,
 	#discogs-logo /* fixes unintended inversion of SVGs in page header */,
 	#header_logo /* fixes unintended inversion of SVGs in page header */,
 	ul[class^='icons'] li a svg /* fixes unintended inversion of SVGs in page header */,
