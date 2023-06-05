@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.13
+@version 0.0.14
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
 @supportURL https://github.com/LamprechtHase/Discogs/issues
 @license CC0-1.0
 ==/UserStyle== */
+
 @-moz-document domain("discogs.com")
 {
 	body {
@@ -354,4 +355,54 @@
 		
 	}
 	
+}
+
+@-moz-document domain("discogs.com"), domain("embed.music.apple.com")
+{
+	[hydrated] /* Apple music embedded player */
+	{
+		--borderRule: rgba(255, 255, 255, 0.1);
+		--emptyPlatterBg: #6e6e6e;
+		--explicitTracklistBadge: #8e8e93;
+		--labelDivider: rgba(255, 255, 255, 0.1);
+		--labelPrimary: rgba(255, 255, 255, 0.9);
+		--labelPrimaryInverted: rgba(0, 0, 0, 0.95);
+		--labelQuaternary: rgba(235, 235, 245, 0.18);
+		--labelSecondary: rgba(235, 235, 245, 0.6);
+		--labelTertiary: rgba(235, 235, 245, 0.3);
+		--menuItemHoverBg: rgba(0, 0, 0, 0.05);
+		--musicKeyColor: #d6003b;
+		--musicKeyColorOutline: rgba(214, 0, 59, 0.6);
+		--musicKeyQuaternary: rgba(214, 0, 59, 0.06);
+		--musicKeySecondary: rgba(214, 0, 59, 0.6);
+		--overlayBg: rgba(64, 64, 64, 0.9);
+		--overlayBgBlur: rgba(64, 64, 64, 0.7);
+		--pageBg: #404040;
+		--platterBg: #1c1c1e;
+		--platterBgTransparent: rgba(28, 28, 30, 0);
+		--playerMissingArtworkIcon: #434343;
+		--playerMissingArtworkBg: #323232;
+		--podcastKeyPrimary: #9c5af2;
+		--podcastKeyQuaternary: rgba(156, 90, 242, 0.1);
+		--podcastKeySecondary: rgba(156, 90, 242, 0.6);
+		--podcastKeyTertiary: rgba(156, 90, 242, 0.25);
+		--podcastScrim: rgba(255, 255, 255, 0.5);
+		--progressElapsed: #a5aab2;
+		--progressRemaining: #e1e1e6;
+		--shelfBg: rgba(0, 0, 0, 0.1);
+		--systemGray: #98989d;
+		--embedSecondary: rgba(255, 255, 255, 0.55);
+		--tracklistGradientEnd: rgba(255, 255, 255, 0);
+		--tracklistGradientStart: rgba(255, 255, 255, 0.1);
+		--vibrantDivider: rgba(255, 255, 255, 0.19);
+		--vibrantPrimary: rgba(255, 255, 255, 0.9);
+		--vibrantQuaternary: rgba(235, 235, 245, 0.18);
+		--vibrantSecondary: rgba(235, 235, 245, 0.6);
+		--vibrantTertiary: rgba(235, 235, 245, 0.3);
+		--videoEmbedLabel: rgba(255, 255, 255, 0.8);
+		--videoEmbedMenuBg: rgba(0, 0, 0, 0.97);
+		--videoEmbedMenuHoverBg: rgba(60, 60, 67, 0.18);
+		--videoEmbedSubheadline: rgba(255, 255, 255, 0.4);
+		--boxShadow: rgba(255, 255, 255, 0.25);
+	} /* Note: The Apple music container comes with an own dark theme, but Discogs does not support it. Above variables are the theme="dark" variables overriding the theme="light" variables*/
 }
