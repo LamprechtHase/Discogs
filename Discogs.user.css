@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.12
+@version 0.0.13
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -111,7 +111,8 @@
 	.bg-grey-lighter,
 	.bg-white,
 	#uploader_messaging:hover /* add release */,
-	.drag_drop_content:hover /* add release */
+	.drag_drop_content:hover /* add release */,
+	.ui-widget-content /* sales and transactions policy overlay */
 	{
 		background: #666 !important;
 		background-color: #666 !important;
