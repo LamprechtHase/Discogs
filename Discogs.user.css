@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.11
+@version 0.0.12
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -318,6 +318,16 @@
 	#release-recommendations div[class^='content_'] div[class^='wrapper_']:after /* fixes gradient in recommendations on right side */
 	{
 		background: linear-gradient(90deg,hsla(0,0%,100%,0),#444) !important;
+	}
+	button.lazy_gallery_nav.lazy_gallery_prev /* fixes gradient in recommendations on left side */
+	{
+		background: linear-gradient(to right, #444, rgba(255,255,255,0)) !important;
+		color: #fff !important;
+	}
+	button.lazy_gallery_nav.lazy_gallery_next /* fixes gradient in recommendations on right side */
+	{
+		background: linear-gradient(to left, #444, rgba(255,255,255,0)) !important;
+		color: #fff !important;
 	}
 	
 	.ad_container /* advertising */,
