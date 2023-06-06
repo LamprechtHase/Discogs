@@ -1,20 +1,28 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.15
+@version 0.0.16
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
 @supportURL https://github.com/LamprechtHase/Discogs/issues
 @license CC0-1.0
 @advanced color primary-background-color "Primary background color" #444
+@advanced color secondary-background-color "Secondary background color" #666
+@advanced color table-background-color-odd "Table background color for odd line numbers" #333
+@advanced color table-background-color-even "Table background color for even line numbers" #555
+@advanced color table-background-color-unavailable "Table background color for unavailable items" #000
+@advanced color primary-text-color "Primary text color" #fff
+@advanced color hyperlink-color "Hyperlink color" #ffbb00
+@advanced color primary-highlight-color "Primary highlight color including headings" red
+@advanced color secondary-highlight-color "Secondary highlight color including headings" green
 ==/UserStyle== */
 
 @-moz-document domain("discogs.com")
 {
 	body {
 		background-color: #444 !important;
-		background-color: /*[[primary-background-color]]*/;
+		background-color: /*[[primary-background-color]]*/ !important;
 		color: #fff !important;
 	}
 	
@@ -28,6 +36,7 @@
 	.thread_message
 	{ /* text color */
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 	
 	a /* hyperlink text color */,
@@ -37,6 +46,7 @@
 	button.button_3lXdg.link_1judM /* share button on release page */
 	{ 
 		color: #ffbb00 !important;
+		color: /*[[hyperlink-color]]*/ !important;
 	}
 	
 	.sticky_aside /* aside */,
@@ -91,6 +101,7 @@
 		background: transparent !important;
 		background-color: transparent !important;
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 	
 	.marketplace_aside /* special style for aside */,
@@ -118,8 +129,11 @@
 	.ui-widget-content /* sales and transactions policy overlay */
 	{
 		background: #666 !important;
+		background: /*[[secondary-background-color]]*/ !important;
 		background-color: #666 !important;
+		background-color: /*[[secondary-background-color]]*/ !important;
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 	
 	.messageContents table /* messages */,
@@ -153,6 +167,7 @@
 	table thead tr button /* seen applied to album versions table, buttons for sorting */
 	{
 		color: red !important;
+		color: /*[[primary-highlight-color]]*/ !important;
 	}
 	
 	table thead tr,
@@ -165,14 +180,18 @@
 	table tbody tr { background-color: transparent !important; }
 	
 	table tbody tr.shortcut_navigable:nth-child(odd) { background-color: #333 !important; }
+	table tbody tr.shortcut_navigable:nth-child(odd) { background-color: /*[[table-background-color-odd]]*/ !important; }
 	
 	table tbody tr.shortcut_navigable:nth-child(even) { background-color: #555 !important; }
+	table tbody tr.shortcut_navigable:nth-child(even) { background-color: /*[[table-background-color-even]]*/ !important; }
 	
 	table tbody tr.shortcut_navigable.unavailable { background-color: #000 !important; }
+	table tbody tr.shortcut_navigable.unavailable { background-color: /*[[table-background-color-unavailable]]*/ !important; }
 	
 	table tbody tr.shortcut_navigable.unavailable td.item_add_to_cart.cart_button_substitute_text.muted /* hightlights shipment text unavailable */
 	{
 		color: red !important;
+		color: /*[[primary-highlight-color]]*/ !important;
 		font-weight: bold !important;
 	}
 	
@@ -220,6 +239,7 @@
 	.quote_user .icon-comment /* forum actions below post */
 	{
 		color: #ffbb00 !important;
+		color: /*[[hyperlink-color]]*/ !important;
 	}
 	
 	.order_suggestions /* checkout page */
@@ -232,10 +252,12 @@
 	{
 		background-color: #444 !important;
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 		.offers_box table thead tr th /* offers box on purchases page */
 		{
 			color: #fff !important;
+			color: /*[[primary-text-color]]*/ !important;
 		}
 	
 	h1, h2, h3, h4, h5, h6, /* all headings */
@@ -250,6 +272,7 @@
 		background: transparent !important;
 		background-color: transparent !important;
 		color: red !important;
+		color: /*[[primary-highlight-color]]*/ !important;
 	}
 	
 	h2 > button /* footer */,
@@ -264,7 +287,8 @@
 	.community_rating /* extra highlight for the rating */,
 	.show-shipping-methods /* highlight for shipping */
 	{ 
-		color: #00ff00 !important;
+		color: green !important;
+		color: /*[[secondary-highlight-color]]*/ !important;
 	}
 	
 	p.pricing_info /* should apply to wantlist in marketplace only */,
@@ -318,7 +342,7 @@
 	#release-recommendations div[class^='content_'] div[class^='wrapper_']:before /* fixes gradient in recommendations on left side */
 	{
 		background: linear-gradient(270deg,hsla(0,0%,100%,0),#444) !important;
-		background: linear-gradient(270deg,hsla(0,0%,100%,0),/*[[primary-background-color]]*/);
+		background: linear-gradient(270deg,hsla(0,0%,100%,0),/*[[primary-background-color]]*/) !important;
 	}
 	#release-recommendations div[class^='content_'] div[class^='wrapper_']:after /* fixes gradient in recommendations on right side */
 	{
@@ -328,14 +352,16 @@
 	button.lazy_gallery_nav.lazy_gallery_prev /* fixes gradient in recommendations on left side */
 	{
 		background: linear-gradient(to right, #444, rgba(255,255,255,0)) !important;
-		background: linear-gradient(to right, /*[[primary-background-color]]*/, rgba(255,255,255,0));
+		background: linear-gradient(to right, /*[[primary-background-color]]*/, rgba(255,255,255,0)) !important;
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 	button.lazy_gallery_nav.lazy_gallery_next /* fixes gradient in recommendations on right side */
 	{
 		background: linear-gradient(to left, #444, rgba(255,255,255,0)) !important;
-		background: linear-gradient(to left, /*[[primary-background-color]]*/, rgba(255,255,255,0));
+		background: linear-gradient(to left, /*[[primary-background-color]]*/, rgba(255,255,255,0)) !important;
 		color: #fff !important;
+		color: /*[[primary-text-color]]*/ !important;
 	}
 	
 	.ad_container /* advertising */,
