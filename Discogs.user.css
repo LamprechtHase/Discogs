@@ -1,18 +1,20 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.14
+@version 0.0.15
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
 @supportURL https://github.com/LamprechtHase/Discogs/issues
 @license CC0-1.0
+@advanced color primary-background-color "Primary background color" #444
 ==/UserStyle== */
 
 @-moz-document domain("discogs.com")
 {
 	body {
 		background-color: #444 !important;
+		background-color: /*[[primary-background-color]]*/;
 		color: #fff !important;
 	}
 	
@@ -316,19 +318,23 @@
 	#release-recommendations div[class^='content_'] div[class^='wrapper_']:before /* fixes gradient in recommendations on left side */
 	{
 		background: linear-gradient(270deg,hsla(0,0%,100%,0),#444) !important;
+		background: linear-gradient(270deg,hsla(0,0%,100%,0),/*[[primary-background-color]]*/);
 	}
 	#release-recommendations div[class^='content_'] div[class^='wrapper_']:after /* fixes gradient in recommendations on right side */
 	{
 		background: linear-gradient(90deg,hsla(0,0%,100%,0),#444) !important;
+		background: linear-gradient(90deg,hsla(0,0%,100%,0),/*[[primary-background-color]]*/) !important;
 	}
 	button.lazy_gallery_nav.lazy_gallery_prev /* fixes gradient in recommendations on left side */
 	{
 		background: linear-gradient(to right, #444, rgba(255,255,255,0)) !important;
+		background: linear-gradient(to right, /*[[primary-background-color]]*/, rgba(255,255,255,0));
 		color: #fff !important;
 	}
 	button.lazy_gallery_nav.lazy_gallery_next /* fixes gradient in recommendations on right side */
 	{
 		background: linear-gradient(to left, #444, rgba(255,255,255,0)) !important;
+		background: linear-gradient(to left, /*[[primary-background-color]]*/, rgba(255,255,255,0));
 		color: #fff !important;
 	}
 	
@@ -354,7 +360,6 @@
 		display: none !important
 		
 	}
-	
 }
 
 @-moz-document domain("discogs.com"), domain("embed.music.apple.com")
@@ -404,5 +409,5 @@
 		--videoEmbedMenuHoverBg: rgba(60, 60, 67, 0.18);
 		--videoEmbedSubheadline: rgba(255, 255, 255, 0.4);
 		--boxShadow: rgba(255, 255, 255, 0.25);
-	} /* Note: The Apple music container comes with an own dark theme, but Discogs does not support it. Above variables are the theme="dark" variables overriding the theme="light" variables*/
+	} /* Note: The Apple music player comes with an own dark theme, but Discogs does not support it. Above variables are the theme="dark" variables overriding the theme="light" variables */
 }
