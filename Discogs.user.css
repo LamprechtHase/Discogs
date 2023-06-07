@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.18
+@version 0.0.19
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -61,6 +61,7 @@
 	.icon-vinyl /* release page artist code icon */,
 	span[class^='copy_shortcut_code'] /* release page artist code text */,
 	form,
+	form[id^='site_search'] input /* search in site header */,
 	.form-block,
 	header,
 	#release-marketplace,
@@ -209,6 +210,12 @@
 	table tbody tr.shortcut_navigable:hover td.notes.has_header.cell_collapsed div.notes_field.notes_edited /* fix for low contrast in wantlist notes on hover */
 	{
 		color: #222 !important;
+	}
+	
+	table.cards tbody, table.cards tbody tr, table.cards tbody tr:nth-child(odd), table.cards tbody tr:nth-child(even) /* workaround for brand-new nonsense code: table with multiple (empty) headers and multiple bodies - hope this is a bug that goes away */
+	{
+		background: transparent !important;
+		background-color: transparent !important;
 	}
 	
 	legend
