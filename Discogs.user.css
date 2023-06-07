@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.21
+@version 0.0.22
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -22,7 +22,8 @@
 
 @-moz-document domain("discogs.com")
 {
-	body {
+	body
+	{
 		background-color: #444 !important;
 		background-color: /*[[primary-background-color]]*/ !important;
 		color: #fff !important;
@@ -103,7 +104,8 @@
 	span[class^='vote_info_helper'] /* edit release */,
 	#release-actions header[class^='header'] button /* release page */,
 	#master-actions header[class^='header'] button /* release page */,
-	div#quick_search_results ul li a span.sublabel /* quick search in site header: drop-down list of results */
+	div#quick_search_results ul li a span.sublabel /* quick search in site header: drop-down list of results */,
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] /* quick search in site header: drop-down list of results */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -136,7 +138,8 @@
 	.ui-widget-content /* sales and transactions policy overlay */,
 	#onetrust-banner-sdk /* banner at bottom of page for privacy consent */,
 	div#quick_search_results ul li.ui-menu-item /* quick search in site header: drop-down list of results */,
-	div#quick_search_results ul[class^='results'] li /* quick search in site header: drop-down list of results */
+	div#quick_search_results ul[class^='results'] li /* quick search in site header: drop-down list of results */,
+	div[class*="listbox"] /* quick search in site header: drop-down list of results */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
@@ -148,7 +151,8 @@
 	
 	.messageContents table /* messages */,
 	#release-marketplace header[class^='header'] /* fixes marketplace in release page */,
-	#master-release-marketplace header[class^='header'] /* fixes marketplace in release page */
+	#master-release-marketplace header[class^='header'] /* fixes marketplace in release page */,
+	button[type=submit] /* quick search in site header */
 	{
 		background: inherit !important;
 		background-color: inherit !important;
@@ -291,15 +295,6 @@
 		color: /*[[primary-highlight-color]]*/ !important;
 	}
 	
-	h2 > button /* footer */,
-	a.ultp-block-title /* brwosing Discogs Features */,
-	a.wp-block-post-title /* encountered on Selling page */,
-	.reduced,
-	div#quick_search_results ul li a span.label.with-sublabel /* quick search in site header: drop-down list of results */
-	{
-		color: inherit !important;
-	}
-	
 	.rating_value_sm /* extra highlight for the rating */,
 	.community_rating /* extra highlight for the rating */,
 	.show-shipping-methods /* highlight for shipping */
@@ -316,11 +311,6 @@
 		font-weight: bold !important;
 	}
 	
-	div[class^='noItems'] p /* release page, highlight no items for sale */
-	{
-		color: inherit !important;
-	}
-	
 	.additional-instructions /* on orders page, instructions, slightly less colorful background */
 	{
 		background-color: #ffb !important;
@@ -331,6 +321,17 @@
 	a[class*='register'] /* register button */
 	{
 		color: #222 !important;
+	}
+		
+	h2 > button /* footer */,
+	a.ultp-block-title /* browsing Discogs Features */,
+	a.wp-block-post-title /* encountered on Selling page */,
+	.reduced,
+	div[class^='noItems'] p /* release page, highlight no items for sale */,
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */,
+	div#quick_search_results ul li a span.label.with-sublabel /* quick search in site header: drop-down list of results */
+	{
+		color: inherit !important;
 	}
 	
 	#youtube_tracklist, ul[class^='videos_'] /* fixes layout of youtube video box */
@@ -350,7 +351,7 @@
 	#header_logo /* fixes unintended inversion of SVGs in page header */,
 	ul[class^='icons'] li a svg /* fixes unintended inversion of SVGs in page header */,
 	span[class^='rating'] svg /* stars in review of release */,
-	svg[class^='icon'] /* expand actions button in review of release */,
+	svg[class*='icon'] /* expand actions button in review of release */,
 	svg[class^='logo'] /* Discogs logo in footer */
 	{
 		filter: invert(0%) !important;
