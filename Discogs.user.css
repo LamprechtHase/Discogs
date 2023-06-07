@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.20
+@version 0.0.21
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -15,6 +15,7 @@
 @advanced color table-background-color-unavailable "Table background color for unavailable items" #000
 @advanced color primary-text-color "Primary text color" #fff
 @advanced color hyperlink-color "Hyperlink color" #ffbb00
+@advanced color hyperlink-color-visited "Hyperlink color visited" #ff00ee
 @advanced color primary-highlight-color "Primary highlight color including headings" red
 @advanced color secondary-highlight-color "Secondary highlight color" #00ff00
 ==/UserStyle== */
@@ -62,7 +63,8 @@
 	.icon-vinyl /* release page artist code icon */,
 	span[class^='copy_shortcut_code'] /* release page artist code text */,
 	form,
-	form[id^='site_search'] input /* search in site header */,
+	form[id*='search'] input /* search in site header */,
+	form[class*='search'] input /* search in site header */,
 	.form-block,
 	header,
 	#release-marketplace,
@@ -100,7 +102,8 @@
 	.bulk_actions_section /* sell - manage - with entire inventory */,
 	span[class^='vote_info_helper'] /* edit release */,
 	#release-actions header[class^='header'] button /* release page */,
-	#master-actions header[class^='header'] button /* release page */
+	#master-actions header[class^='header'] button /* release page */,
+	div#quick_search_results ul li a span.sublabel /* quick search in site header: drop-down list of results */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -131,7 +134,9 @@
 	#uploader_messaging:hover /* add release */,
 	.drag_drop_content:hover /* add release */,
 	.ui-widget-content /* sales and transactions policy overlay */,
-	#onetrust-banner-sdk /* banner at bottom of page for privacy consent */
+	#onetrust-banner-sdk /* banner at bottom of page for privacy consent */,
+	div#quick_search_results ul li.ui-menu-item /* quick search in site header: drop-down list of results */,
+	div#quick_search_results ul[class^='results'] li /* quick search in site header: drop-down list of results */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
@@ -164,11 +169,6 @@
 	{
 		background: #888 !important;
 		background-color: #888 !important;
-	}
-	
-	ul li.ui-menu-item /* quick search in site header: drop-down list of results */
-	{
-		background-color: #ccc !important;
 	}
 	
 	.tab_menu > li.current { background-color: #aaa !important; }
@@ -294,7 +294,8 @@
 	h2 > button /* footer */,
 	a.ultp-block-title /* brwosing Discogs Features */,
 	a.wp-block-post-title /* encountered on Selling page */,
-	.reduced
+	.reduced,
+	div#quick_search_results ul li a span.label.with-sublabel /* quick search in site header: drop-down list of results */
 	{
 		color: inherit !important;
 	}
@@ -381,6 +382,12 @@
 	}
 	
 	.tab_menu li.current a { border-bottom: unset !important; } /* Highlight for current tab in navigation */
+	
+	a:visited /* visited hyperlinks */
+	{
+		color: #ff00ee !important;
+		color: /*[[hyperlink-color-visited]]*/ !important;
+	}
 	
 	.ad_container /* advertising */,
 	div[class^='ad_flexa'] /* advertising */,
