@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.19
+@version 0.0.20
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -35,7 +35,8 @@
 	.type,
 	.tracklist_track_duration,
 	.item_condition,
-	.thread_message
+	.thread_message,
+	button[class^='star'] /* stars for rating of release*/
 	{ /* text color */
 		color: #fff !important;
 		color: /*[[primary-text-color]]*/ !important;
@@ -163,6 +164,11 @@
 	{
 		background: #888 !important;
 		background-color: #888 !important;
+	}
+	
+	ul li.ui-menu-item /* quick search in site header: drop-down list of results */
+	{
+		background-color: #ccc !important;
 	}
 	
 	.tab_menu > li.current { background-color: #aaa !important; }
