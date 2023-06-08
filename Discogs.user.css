@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.24
+@version 0.0.25
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -50,7 +50,8 @@
 	button.button_3lXdg.link_1judM.button_1a9y4 /* sometimes the buttons below the reviews on the release page have this special class assigned */,
 	button.button_3lXdg.link_1judM /* share button on release page */,
 	button[type*='submit'] /* send message (for example) */,
-	i[class*='search'] /* magnifier button in site search */
+	i[class*='search'] /* magnifier button in site search */,
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */
 	{ 
 		color: #ffbb00 !important;
 		color: /*[[hyperlink-color]]*/ !important;
@@ -299,7 +300,8 @@
 	
 	.rating_value_sm /* extra highlight for the rating */,
 	.community_rating /* extra highlight for the rating */,
-	.show-shipping-methods /* highlight for shipping */
+	.show-shipping-methods /* highlight for shipping */,
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="forsale"] /* quick search in site header: drop-down list of results */
 	{ 
 		color: #00ff00 !important;
 		color: /*[[secondary-highlight-color]]*/ !important;
@@ -330,7 +332,6 @@
 	a.wp-block-post-title /* encountered on Selling page */,
 	.reduced,
 	div[class^='noItems'] p /* release page, highlight no items for sale */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */,
 	div#quick_search_results ul li a span.label.with-sublabel /* quick search in site header: drop-down list of results */
 	{
 		color: inherit !important;
