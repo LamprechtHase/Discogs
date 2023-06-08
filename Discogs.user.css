@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.22
+@version 0.0.23
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -48,7 +48,8 @@
 	.notes_add /* color for editing notes in wantlist, set same as hyperlink */,
 	.list_title /* list explorer */,
 	button.button_3lXdg.link_1judM.button_1a9y4 /* sometimes the buttons below the reviews on the release page have this special class assigned */,
-	button.button_3lXdg.link_1judM /* share button on release page */
+	button.button_3lXdg.link_1judM /* share button on release page */,
+	button[type*='submit'] /* send message (for example) */
 	{ 
 		color: #ffbb00 !important;
 		color: /*[[hyperlink-color]]*/ !important;
