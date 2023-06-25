@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.25
+@version 0.0.26
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -51,7 +51,8 @@
 	button.button_3lXdg.link_1judM /* share button on release page */,
 	button[type*='submit'] /* send message (for example) */,
 	i[class*='search'] /* magnifier button in site search */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */,
+	button.show-terms-link /* seller terms */
 	{ 
 		color: #ffbb00 !important;
 		color: /*[[hyperlink-color]]*/ !important;
@@ -108,7 +109,8 @@
 	#release-actions header[class^='header'] button /* release page */,
 	#master-actions header[class^='header'] button /* release page */,
 	div#quick_search_results ul li a span.sublabel /* quick search in site header: drop-down list of results */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] /* quick search in site header: drop-down list of results */
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] /* quick search in site header: drop-down list of results */,
+	address
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -142,7 +144,8 @@
 	#onetrust-banner-sdk /* banner at bottom of page for privacy consent */,
 	div#quick_search_results ul li.ui-menu-item /* quick search in site header: drop-down list of results */,
 	div#quick_search_results ul[class^='results'] li /* quick search in site header: drop-down list of results */,
-	div[class*="listbox"] /* quick search in site header: drop-down list of results */
+	div[class*="listbox"] /* quick search in site header: drop-down list of results */,
+	.alert-message /* alert message on dashboard */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
@@ -237,7 +240,8 @@
 	}
 	
 	.facet_count /* numbers in .facet-bar indicating quantity, found in marketplace */,
-	span[class^='bulk_action'] /* sell - manage - with entire inventory */
+	span[class^='bulk_action'] /* sell - manage - with entire inventory */,
+	.alert-message-text /* alert message on dashboard */
 	{
 		color: #eee !important;
 	}
@@ -245,15 +249,11 @@
 	label,
 	.community_number /* wantlist number of people have or want release */,
 	.community_result /* wantlist number of people have or want release */,
-	.mplabel /* e.g. wantlist label text in front of media condition, ships from etc. */
+	.mplabel /* e.g. wantlist label text in front of media condition, ships from etc. */,
+	.order_message_time /* log of individual order */,
+	.react-modal-description /* for example leaving feedback for a seller */
 	{
 		color: #ccc !important;
-	}
-	
-	.alert-message-text,
-	.order_message_time
-	{
-		color: #888 !important;
 	}
 	
 	.thread_action_report .icon-thumbs-down /* forum actions below post */,
@@ -290,7 +290,9 @@
 	.order_fee /* special highlight for fee */,
 	#order_total_fee /* special highlight for fee */,
 	div[class^='noItems'] /* release page, highlight no items for sale */,
-	.action_block_header /* sell - manage - import and export */
+	.action_block_header /* sell - manage - import and export */,
+	.announcement-title /* alert message on dashboard */,
+	.alert-message-icon /* alert message on dashboard */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
