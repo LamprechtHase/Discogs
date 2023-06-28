@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.28
+@version 0.0.29
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -24,6 +24,7 @@
 {
 	body,
 	.catalog-opt-in-section /* try beta version of the new artist page */,
+	section[class*="optin"] /* try beta version of the new artist page */,
 	button[class*="expanded"] /* inside facets container, artist beta page */,
 	span[class*="subFacet"] /* inside facets container, artist beta page */,
 	p[class*="superFacetCount"] /* inside facets container, artist beta page */
@@ -60,7 +61,8 @@
 	i[class*='search'] /* magnifier button in site search */,
 	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */,
 	button.show-terms-link /* seller terms */,
-	button svg[class*='icon']
+	button svg[class*='icon'],
+	button[class*='toggle'] /* hide credits on release page */
 	{ 
 		color: #ffbb00 !important;
 		color: /*[[hyperlink-color]]*/ !important;
@@ -182,22 +184,24 @@
 	
 	.react-modal-title { color: #555; }
 	
+	.section-as-link:hover /* fix for forum aside highlight on hover */,
+	.section_link:hover /* fix for forum aside highlight on hover */,
+	.aside-thread:hover ul /* fix for forum aside highlight on hover */,
+	.aside-thread > .section_link:hover /* fix for forum aside highlight on hover */,
 	.facet-bar /* bar graph indicating quantity, found in marketplace */,
 	.tool-tip-content /* pop-up seen on seller profile page (shipping) */,
 	button[class*="facets"]:focus-within /* inside facets container, artist beta page */,
 	button[class*="superFacets"]:focus-within /* inside facets container, artist beta page */,
 	div[class*="rowHeading"] /* artist beta page */
-	{ 
-		background-color: #888 !important;
-	}
-	
-	.section-as-link:hover /* fix for forum aside highlight on hover */,
-	.section_link:hover /* fix for forum aside highlight on hover */,
-	.aside-thread:hover ul /* fix for forum aside highlight on hover */,
-	.aside-thread > .section_link:hover /* fix for forum aside highlight on hover */
 	{
 		background: #888 !important;
 		background-color: #888 !important;
+	}
+	
+	a.has_skittles.ui-corner-all.ui-state-focus /* search in site header, drop down list of results*/
+	{
+		background: #333 !important;
+		background-color: #333 !important;
 	}
 	
 	div[class*="list"] div[class*="item"] span[class*="size"] /* filter, artist beta page */
@@ -279,7 +283,8 @@
 	.community_result /* wantlist number of people have or want release */,
 	.mplabel /* e.g. wantlist label text in front of media condition, ships from etc. */,
 	.order_message_time /* log of individual order */,
-	.react-modal-description /* for example leaving feedback for a seller */
+	.react-modal-description /* for example leaving feedback for a seller */,
+	span.format /* search in site header, drop down list of results*/
 	{
 		color: #ccc !important;
 	}
@@ -331,7 +336,8 @@
 	.rating_value_sm /* extra highlight for the rating */,
 	.community_rating /* extra highlight for the rating */,
 	.show-shipping-methods /* highlight for shipping */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="forsale"] /* quick search in site header: drop-down list of results */
+	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="forsale"] /* quick search in site header: drop-down list of results */,
+	.release_marketplace /* quick search in site header: drop-down list of results */
 	{ 
 		color: #00ff00 !important;
 		color: /*[[secondary-highlight-color]]*/ !important;
@@ -341,7 +347,6 @@
 	td.item_price .price /* should apply to wantlist in marketplace only */,
 	.converted_price /* price including shipping */
 	{
-		font-size: 1.5em !important;
 		font-weight: bold !important;
 	}
 	
