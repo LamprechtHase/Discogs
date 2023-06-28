@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.27
+@version 0.0.28
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -266,7 +266,10 @@
 	
 	.facet_count /* numbers in .facet-bar indicating quantity, found in marketplace */,
 	span[class^='bulk_action'] /* sell - manage - with entire inventory */,
-	.alert-message-text /* alert message on dashboard */
+	.alert-message-text /* alert message on dashboard */,
+	figcaption div[class*="minimal"] div[class*="released"] /* recommendations on release page */,
+	figcaption div[class*="minimal"] div[class*="released"] div[class*="date"] /* recommendations on release page */,
+	figcaption div[class*="format"] /* recommendations on release page */
 	{
 		color: #eee !important;
 	}
