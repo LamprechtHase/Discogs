@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.29
+@version 0.0.30
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -24,10 +24,10 @@
 {
 	body,
 	.catalog-opt-in-section /* try beta version of the new artist page */,
-	section[class*="optin"] /* try beta version of the new artist page */,
-	button[class*="expanded"] /* inside facets container, artist beta page */,
-	span[class*="subFacet"] /* inside facets container, artist beta page */,
-	p[class*="superFacetCount"] /* inside facets container, artist beta page */
+	section[class*='optin'] /* try beta version of the new artist page */,
+	button[class*='expanded'] /* inside facets container, artist beta page */,
+	span[class*='subFacet'] /* inside facets container, artist beta page */,
+	p[class*='superFacetCount'] /* inside facets container, artist beta page */
 	{
 		background: #444 !important;
 		background: /*[[primary-background-color]]*/ !important;
@@ -46,7 +46,7 @@
 	.item_condition,
 	.thread_message,
 	button[class^='star'] /* stars for rating of release*/,
-	p[class*="superFacet"] /* inside facets container, artist beta page */
+	p[class*='superFacet'] /* inside facets container, artist beta page */
 	{
 		color: #fff !important;
 		color: /*[[primary-text-color]]*/ !important;
@@ -59,7 +59,7 @@
 	button.button_3lXdg.link_1judM /* share button on release page */,
 	button[type*='submit'] /* send message (for example) */,
 	i[class*='search'] /* magnifier button in site search */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] span[class*="title"] span[class*="link"] /* quick search in site header: drop-down list of results */,
+	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='heading'] span[class*='title'] span[class*='link'] /* quick search in site header: drop-down list of results */,
 	button.show-terms-link /* seller terms */,
 	button svg[class*='icon'],
 	button[class*='toggle'] /* hide credits on release page */
@@ -120,10 +120,10 @@
 	#release-actions header[class^='header'] button /* release page */,
 	#master-actions header[class^='header'] button /* release page */,
 	div#quick_search_results ul li a span.sublabel /* quick search in site header: drop-down list of results */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="heading"] /* quick search in site header: drop-down list of results */,
+	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='heading'] /* quick search in site header: drop-down list of results */,
 	address,
 	select#show /* filter for quantity shown, artist beta page */,
-	div[class*="wrapper"] div[class*="box"] input[class*="input"] /* artist beta page */
+	div[class*='wrapper'] div[class*='box'] input[class*='input'] /* artist beta page */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -143,10 +143,10 @@
 	.instructions_container,
 	.order_help,
 	.order_suggestions,
-	div[class^="ginput_container"] /* form on advertising page */,
+	div[class^='ginput_container'] /* form on advertising page */,
 	span[id^='input'] input /* form on advertising page */,
-	div[class^="ginput_container"] textarea /* form on advertising page */,
-	div[class^="ginput_container"] input /* form on advertising page */,
+	div[class^='ginput_container'] textarea /* form on advertising page */,
+	div[class^='ginput_container'] input /* form on advertising page */,
 	a.action_block /* sell - manage - import and export */,
 	.react-modal,
 	.bg-grey-lighter,
@@ -157,13 +157,13 @@
 	#onetrust-banner-sdk /* banner at bottom of page for privacy consent */,
 	div#quick_search_results ul li.ui-menu-item /* quick search in site header: drop-down list of results */,
 	div#quick_search_results ul[class^='results'] li /* quick search in site header: drop-down list of results */,
-	div[class*="listbox"] /* quick search in site header: drop-down list of results */,
+	div[class*='listbox'] /* quick search in site header: drop-down list of results */,
 	.alert-message /* alert message on dashboard */,
-	button[class*="facets"]:hover /* inside facets container, artist beta page */,
-	button[class*="superFacets"]:hover /* inside facets container, artist beta page */,
-	div[class*="artistVersionFinder"] /* filter on artist beta page */,
-	div[class*="wrapper"] div[class*="list"] /* filter on artist beta page */,
-	div[class*="actionsDropdown"] ul li /* drop down list appearing after clicking the three dots, artist beta page */
+	button[class*='facets']:hover /* inside facets container, artist beta page */,
+	button[class*='superFacets']:hover /* inside facets container, artist beta page */,
+	div[class*='artistVersionFinder'] /* filter on artist beta page */,
+	div[class*='wrapper'] div[class*='list'] /* filter on artist beta page */,
+	div[class*='actionsDropdown'] ul li /* drop down list appearing after clicking the three dots, artist beta page */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
@@ -176,7 +176,7 @@
 	.messageContents table /* messages */,
 	#release-marketplace header[class^='header'] /* fixes marketplace in release page */,
 	#master-release-marketplace header[class^='header'] /* fixes marketplace in release page */,
-	button[type=submit] /* quick search in site header */
+	button[type='submit'] /* quick search in site header */
 	{
 		background: inherit !important;
 		background-color: inherit !important;
@@ -190,9 +190,9 @@
 	.aside-thread > .section_link:hover /* fix for forum aside highlight on hover */,
 	.facet-bar /* bar graph indicating quantity, found in marketplace */,
 	.tool-tip-content /* pop-up seen on seller profile page (shipping) */,
-	button[class*="facets"]:focus-within /* inside facets container, artist beta page */,
-	button[class*="superFacets"]:focus-within /* inside facets container, artist beta page */,
-	div[class*="rowHeading"] /* artist beta page */
+	button[class*='facets']:focus-within /* inside facets container, artist beta page */,
+	button[class*='superFacets']:focus-within /* inside facets container, artist beta page */,
+	div[class*='rowHeading'] /* artist beta page */
 	{
 		background: #888 !important;
 		background-color: #888 !important;
@@ -204,7 +204,7 @@
 		background-color: #333 !important;
 	}
 	
-	div[class*="list"] div[class*="item"] span[class*="size"] /* filter, artist beta page */
+	div[class*='list'] div[class*='item'] span[class*='size'] /* filter, artist beta page */
 	{
 		background: #ccc !important;
 		background-color: #ccc !important;
@@ -271,9 +271,9 @@
 	.facet_count /* numbers in .facet-bar indicating quantity, found in marketplace */,
 	span[class^='bulk_action'] /* sell - manage - with entire inventory */,
 	.alert-message-text /* alert message on dashboard */,
-	figcaption div[class*="minimal"] div[class*="released"] /* recommendations on release page */,
-	figcaption div[class*="minimal"] div[class*="released"] div[class*="date"] /* recommendations on release page */,
-	figcaption div[class*="format"] /* recommendations on release page */
+	figcaption div[class*='minimal'] div[class*='released'] /* recommendations on release page */,
+	figcaption div[class*='minimal'] div[class*='released'] div[class*='date'] /* recommendations on release page */,
+	figcaption div[class*='format'] /* recommendations on release page */
 	{
 		color: #eee !important;
 	}
@@ -336,7 +336,7 @@
 	.rating_value_sm /* extra highlight for the rating */,
 	.community_rating /* extra highlight for the rating */,
 	.show-shipping-methods /* highlight for shipping */,
-	div[class*="listbox"] div[class*="suggestions"] ul li[class*="result"] a div[class*="content"] div[class*="forsale"] /* quick search in site header: drop-down list of results */,
+	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='forsale'] /* quick search in site header: drop-down list of results */,
 	.release_marketplace /* quick search in site header: drop-down list of results */
 	{ 
 		color: #00ff00 !important;
@@ -430,6 +430,8 @@
 	
 	#page.shadow_on_left #page_content { box-shadow: unset !important; } /* removes shadow on item sell page because this looks stupid together with the aside background color */
 	
+	span[class*='hl_changed'] { background-color: #bb0 !important; } /* release change log highlight color */
+	
 	.ad_container /* advertising */,
 	div[class^='ad_flexa'] /* advertising */,
 	div[class^='ad_right'] /* advertising */,
@@ -449,8 +451,7 @@
 	#ad_bottom /* advertising */,
 	.sticky_footer /* advertising */
 	{
-		display: none !important
-		
+		display: none !important;
 	}
 }
 
