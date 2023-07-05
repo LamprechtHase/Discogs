@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.30
+@version 0.0.31
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -284,7 +284,8 @@
 	.mplabel /* e.g. wantlist label text in front of media condition, ships from etc. */,
 	.order_message_time /* log of individual order */,
 	.react-modal-description /* for example leaving feedback for a seller */,
-	span.format /* search in site header, drop down list of results*/
+	span.format /* search in site header, drop down list of results*/,
+	span[class*='title'] span[class*='more'] /* quick search in site header: drop-down list of results */
 	{
 		color: #ccc !important;
 	}
@@ -337,7 +338,8 @@
 	.community_rating /* extra highlight for the rating */,
 	.show-shipping-methods /* highlight for shipping */,
 	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='forsale'] /* quick search in site header: drop-down list of results */,
-	.release_marketplace /* quick search in site header: drop-down list of results */
+	.release_marketplace /* quick search in site header: drop-down list of results */,
+	div[class*='info'] span[class*='marketplace'] /* quick search in site header: drop-down list of results */
 	{ 
 		color: #00ff00 !important;
 		color: /*[[secondary-highlight-color]]*/ !important;
