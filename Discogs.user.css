@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.31
+@version 0.0.32
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -339,7 +339,8 @@
 	.show-shipping-methods /* highlight for shipping */,
 	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='forsale'] /* quick search in site header: drop-down list of results */,
 	.release_marketplace /* quick search in site header: drop-down list of results */,
-	div[class*='info'] span[class*='marketplace'] /* quick search in site header: drop-down list of results */
+	div[class*='info'] span[class*='marketplace'] /* quick search in site header: drop-down list of results */,
+	.free-shipping /* in marketplace */
 	{ 
 		color: #00ff00 !important;
 		color: /*[[secondary-highlight-color]]*/ !important;
@@ -433,6 +434,8 @@
 	#page.shadow_on_left #page_content { box-shadow: unset !important; } /* removes shadow on item sell page because this looks stupid together with the aside background color */
 	
 	span[class*='hl_changed'] { background-color: #bb0 !important; } /* release change log highlight color */
+
+	p[class*='superFacetCount'] { mix-blend-mode: screen !important; } /* fixes the appearance of the sum on the artist beta page*/
 	
 	.ad_container /* advertising */,
 	div[class^='ad_flexa'] /* advertising */,
