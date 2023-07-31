@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.32
+@version 0.0.33
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -123,7 +123,8 @@
 	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='heading'] /* quick search in site header: drop-down list of results */,
 	address,
 	select#show /* filter for quantity shown, artist beta page */,
-	div[class*='wrapper'] div[class*='box'] input[class*='input'] /* artist beta page */
+	div[class*='wrapper'] div[class*='box'] input[class*='input'] /* artist beta page */,
+	div[class*='versions'] /* artist beta page */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
