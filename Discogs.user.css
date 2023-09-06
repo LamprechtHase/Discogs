@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.35
+@version 0.0.36
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -75,6 +75,11 @@
 		fill: /*[[hyperlink-color]]*/ !important;
 	}
 	
+	button svg path[class*='background'] /* youtube play button */
+	{
+		fill: unset !important;
+	}
+	
 	a /* hyperlink text color */,
 	.notes_add /* color for editing notes in wantlist, set same as hyperlink */,
 	.list_title /* list explorer */,
@@ -85,7 +90,8 @@
 	div[class*='listbox'] div[class*='suggestions'] ul li[class*='result'] a div[class*='content'] div[class*='heading'] span[class*='title'] span[class*='link'] /* quick search in site header: drop-down list of results */,
 	button.show-terms-link /* seller terms */,
 	button svg[class*='icon'],
-	button[class*='toggle'] /* hide credits on release page */
+	button[class*='toggle'] /* hide credits on release page */,
+	button[class*='clearAllButton'] /* Artist beta page filter */
 	{ 
 		color: #ffbb00 !important;
 		color: /*[[hyperlink-color]]*/ !important;
