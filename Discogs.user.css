@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.36
+@version 0.0.37
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -319,6 +319,8 @@
 	{
 		color: #ccc !important;
 	}
+	
+	label[class*='rating'] { color: #000 !important; } /* rating seller after transaction */
 	
 	.thread_action_report .icon-thumbs-down /* forum actions below post */,
 	.icon-magnet /* forum actions below post */,
