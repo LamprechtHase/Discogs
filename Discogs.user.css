@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.37
+@version 0.0.38
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -15,7 +15,8 @@
 @advanced color table-background-color-unavailable "Table background color for unavailable items" #000
 @advanced color primary-text-color "Primary text color" #fff
 @advanced color hyperlink-color "Hyperlink color" #ffbb00
-@advanced color hyperlink-color-visited "Hyperlink color visited" #ff00ee
+@advanced color hyperlink-color-visited "Hyperlink color visited" #9900ff
+@advanced color hyperlink-color-hover "Hyperlink color hover" #00ffff
 @advanced color primary-highlight-color "Primary highlight color including headings" red
 @advanced color secondary-highlight-color "Secondary highlight color" #00ff00
 ==/UserStyle== */
@@ -450,8 +451,14 @@
 	
 	a:visited /* visited hyperlinks */
 	{
-		color: #ff00ee !important;
+		color: #9900ff !important;
 		color: /*[[hyperlink-color-visited]]*/ !important;
+	}
+	
+	a:hover
+	{
+		color: #00ffff !important;
+		color: /*[[hyperlink-color-hover]]*/ !important;
 	}
 	
 	#page.shadow_on_left #page_content { box-shadow: unset !important; } /* removes shadow on item sell page because this looks stupid together with the aside background color */
