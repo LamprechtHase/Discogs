@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.38
+@version 0.0.39
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -154,7 +154,8 @@
 	address,
 	select#show /* filter for quantity shown, artist beta page */,
 	div[class*='wrapper'] div[class*='box'] input[class*='input'] /* artist beta page */,
-	div[class*='versions'] /* artist beta page */
+	div[class*='versions'] /* artist beta page */,
+	.toggle_bulk_actions /* with entire inventory - show actions button */
 	{
 		background: transparent !important;
 		background-color: transparent !important;
@@ -466,7 +467,7 @@
 	span[class*='hl_changed'] { background-color: #bb0 !important; } /* release change log highlight color */
 
 	p[class*='superFacetCount'] { mix-blend-mode: screen !important; } /* fixes the appearance of the sum on the artist beta page*/
-	
+		
 	.ad_container /* advertising */,
 	div[class^='ad_flexa'] /* advertising */,
 	div[class^='ad_right'] /* advertising */,
@@ -487,6 +488,13 @@
 	.sticky_footer /* advertising */
 	{
 		display: none !important;
+	}
+}
+
+@-moz-document domain("login.discogs.com") /* new login page */
+{
+	.c9dea45a8 {
+		--widget-background-color: #666 !important;
 	}
 }
 
