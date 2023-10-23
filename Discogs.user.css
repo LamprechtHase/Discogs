@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.39
+@version 0.0.40
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -467,7 +467,7 @@
 	span[class*='hl_changed'] { background-color: #bb0 !important; } /* release change log highlight color */
 
 	p[class*='superFacetCount'] { mix-blend-mode: screen !important; } /* fixes the appearance of the sum on the artist beta page*/
-		
+
 	.ad_container /* advertising */,
 	div[class^='ad_flexa'] /* advertising */,
 	div[class^='ad_right'] /* advertising */,
@@ -493,9 +493,8 @@
 
 @-moz-document domain("login.discogs.com") /* new login page */
 {
-	.c9dea45a8 {
-		--widget-background-color: #666 !important;
-	}
+	.c9dea45a8 { --widget-background-color: #666 !important; } /* login screen background */
+	button[type*='submit'] { border: 1px solid !important; } /* continue button */
 }
 
 @-moz-document domain("discogs.com"), domain("embed.music.apple.com")
