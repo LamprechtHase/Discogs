@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.40
+@version 0.0.41
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -195,7 +195,8 @@
 	button[class*='superFacets']:hover /* inside facets container, artist beta page */,
 	div[class*='artistVersionFinder'] /* filter on artist beta page */,
 	div[class*='wrapper'] div[class*='list'] /* filter on artist beta page */,
-	div[class*='actionsDropdown'] ul li /* drop down list appearing after clicking the three dots, artist beta page */
+	div[class*='actionsDropdown'] ul li /* drop down list appearing after clicking the three dots, artist beta page */,
+	div[class*='discography'] div[class*='releasesGrid'] div div[class*='facetFilter'] /* artist release page (beta) filter */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
@@ -493,7 +494,6 @@
 
 @-moz-document domain("login.discogs.com") /* new login page */
 {
-	.c9dea45a8 { --widget-background-color: #666 !important; } /* login screen background */
 	button[type*='submit'] { border: 1px solid !important; } /* continue button */
 }
 
