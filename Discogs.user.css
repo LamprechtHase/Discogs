@@ -341,7 +341,8 @@
 		box-shadow: none !important;
 	}
 	
-	.offers_box /* offers box on purchases page */
+	.offers_box /* offers box on purchases page */,
+	.rnf-notification-cell:hover, .rnf-notification-cell--light:hover /* notification pop-up */
 	{
 		background-color: #444 !important;
 		color: #fff !important;
