@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Discogs lighter dark
 @namespace https://github.com/LamprechtHase
-@version 0.0.41
+@version 0.0.42
 @description dark mode for Discogs
 @author Lamprecht Hase
 @homepageURL https://github.com/LamprechtHase/Discogs
@@ -196,7 +196,8 @@
 	div[class*='artistVersionFinder'] /* filter on artist beta page */,
 	div[class*='wrapper'] div[class*='list'] /* filter on artist beta page */,
 	div[class*='actionsDropdown'] ul li /* drop down list appearing after clicking the three dots, artist beta page */,
-	div[class*='discography'] div[class*='releasesGrid'] div div[class*='facetFilter'] /* artist release page (beta) filter */
+	div[class*='discography'] div[class*='releasesGrid'] div div[class*='facetFilter'] /* artist release page (beta) filter */,
+	.rnf-notification-feed, .rnf-notification-feed--light /* notification pop-up */
 	{
 		background: #666 !important;
 		background: /*[[secondary-background-color]]*/ !important;
